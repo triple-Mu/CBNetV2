@@ -1,9 +1,10 @@
 # model settings
 use_mask = False
 num_classes = 8
+pretrained = './pretrained/swin_large_patch4_window12_384_22k.pth'
 model = dict(
     type='HybridTaskCascade',
-    pretrained=None,
+    pretrained=pretrained,
     backbone=dict(
         type='SwinTransformer',
         embed_dim=96,
